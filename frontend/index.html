@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Priority Classifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>AI Priority Classifier</h1>
+        <p class="tagline">Real-time ML-powered decision support</p>
+
+        <form id="priorityForm">
+            <div class="field">
+                <input type="number" id="urgency" placeholder="Urgency Score (0-5)" min="0" max="5" required>
+            </div>
+            <div class="field">
+                <input type="number" id="impact" placeholder="Impact Score (0-5)" min="0" max="5" required>
+            </div>
+            <div class="field">
+                <input type="number" id="affected_users" placeholder="Affected Users" min="0" required>
+            </div>
+            <div class="field">
+                <input type="number" id="delay_hours" placeholder="Time Sensitivity (hours)" min="0" required>
+            </div>
+            <div class="checkbox-field">
+                <input type="checkbox" id="critical">
+                <label for="critical">Critical Case</label>
+            </div>
+            <button type="submit">Analyze Priority</button>
+        </form>
+
+        <div id="result" class="result hidden">
+            <h2 id="decision"></h2>
+            <p id="confidence"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
